@@ -3,8 +3,8 @@ import re
 import webbrowser
 import requests
 
-def get_random_wiki_article():
-    """"Get a random Wikipedia article"""
+def get_random_wiki_articles():
+    """"Get random Wikipedia articles"""
     res = requests.get('https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit=10&format=json')
 
     # Get articles in JSON format
@@ -55,5 +55,5 @@ def display_articles(wiki_articles):
     print("No more articles left")
 
 if __name__ == "__main__":
-    ARTICLES = get_random_wiki_article()
+    ARTICLES = get_random_wiki_articles()
     display_articles(ARTICLES)
