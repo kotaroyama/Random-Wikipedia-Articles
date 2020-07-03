@@ -1,6 +1,7 @@
 """Suggests random Wikipedia Articles to the user"""
 import re
 import webbrowser
+
 import requests
 
 def get_random_wiki_articles():
